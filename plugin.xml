@@ -12,5 +12,6 @@
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"/>
         <source-file src="src/android/OSPlugin.java" target-dir="src/cordova-os-plugin/OSPlugin"/>
+        <framework src="androidx.security:security-crypto:1.1.0-alpha06" />
     </platform>
 </plugin>
