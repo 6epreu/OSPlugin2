@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-os-plugin" version="1.0">
+    <name>OSPlugin</name>
+    <js-module name="OSPlugin" src="www/OSPlugin.js">
+        <clobbers target="cordova.plugins.OSPlugin"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="OSPlugin">
+                <param name="android-package" value="com.example.osplugin.OSPlugin"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"/>
+        <source-file src="src/android/OSPlugin.java" target-dir="src/cordova-os-plugin/OSPlugin"/>
+    </platform>
+</plugin>
